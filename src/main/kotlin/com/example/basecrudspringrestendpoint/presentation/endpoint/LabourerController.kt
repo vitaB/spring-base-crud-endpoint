@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMapping
 @Controller
 @RequestMapping("/api/v1/labourer")
 class LabourerController(override val service: LabourerService,
-                         override val mapper: LabourerMapperImpl) : BaseCrudController<LabourerEntity, LabourerDto>() {
+                         override val mapper: LabourerMapperImpl) : BaseCrudController<LabourerEntity, Long, LabourerDto>() {
 }

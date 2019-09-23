@@ -11,4 +11,4 @@ import org.springframework.web.bind.annotation.RequestMapping
 @Controller
 @RequestMapping("/api/v1/customer")
 class CustomerController(override val service: CustomerService,
-                         override val mapper: CustomerMapperImpl) : BaseCrudController<CustomerEntity, CustomerDto>()
+                         override val mapper: CustomerMapperImpl) : BaseCrudController<CustomerEntity, Long, CustomerDto>()

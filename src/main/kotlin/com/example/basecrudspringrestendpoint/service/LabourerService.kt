@@ -6,4 +6,4 @@ import com.example.basecrudspringrestendpoint.service.core.BaseCrudService
 import org.springframework.stereotype.Service
 
 @Service
-class LabourerService(override val repo: LabourerRepo) : BaseCrudService<LabourerEntity>()
+class LabourerService(override val repo: LabourerRepo) : BaseCrudService<LabourerEntity, Long>()
