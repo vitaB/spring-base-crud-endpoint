@@ -5,4 +5,4 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.data.repository.NoRepositoryBean
 
 @NoRepositoryBean
-interface BaseRepo<Entity: BaseEntity, Id>: CrudRepository<Entity, Id>
+interface BaseRepo<Entity : BaseEntity, Id> : CrudRepository<Entity, Id>

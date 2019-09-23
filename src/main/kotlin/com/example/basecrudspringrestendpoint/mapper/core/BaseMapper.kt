@@ -4,9 +4,9 @@ import com.example.basecrudspringrestendpoint.data.model.core.BaseEntity
 import com.example.basecrudspringrestendpoint.presentation.dto.core.BaseDto
 
 
-interface BaseMapper<Entity: BaseEntity, Dto: BaseDto> {
+interface BaseMapper<Entity : BaseEntity, Dto : BaseDto> {
 
-    fun convertToDto(entity: Entity) : Dto
+    fun convertToDto(entity: Entity): Dto
 
-    fun convertToModel(dto: Dto) : Entity
+    fun convertToModel(dto: Dto): Entity
 }

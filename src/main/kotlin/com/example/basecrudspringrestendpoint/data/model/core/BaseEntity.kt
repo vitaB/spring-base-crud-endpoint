@@ -1,8 +1,6 @@
 package com.example.basecrudspringrestendpoint.data.model.core
 
 import javax.persistence.*
-import javax.persistence.GenerationType
-import javax.persistence.GeneratedValue
 
 
 @Entity

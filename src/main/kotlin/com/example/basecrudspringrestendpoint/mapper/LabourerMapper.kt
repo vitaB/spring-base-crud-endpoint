@@ -8,11 +8,11 @@ import org.mapstruct.Mapper
 import org.mapstruct.Mapping
 
 @Mapper(componentModel = "spring")
-interface LabourerMapper: BaseMapper<LabourerEntity, LabourerDto> {
+interface LabourerMapper : BaseMapper<LabourerEntity, LabourerDto> {
 
-    @Mapping(target="estrangement", source="alienation")
-    override fun convertToDto(entity: LabourerEntity) : LabourerDto
+    @Mapping(target = "estrangement", source = "alienation")
+    override fun convertToDto(entity: LabourerEntity): LabourerDto
 
     @InheritConfiguration
-    override fun convertToModel(dto: LabourerDto) : LabourerEntity
+    override fun convertToModel(dto: LabourerDto): LabourerEntity
 }

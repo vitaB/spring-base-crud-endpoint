@@ -5,4 +5,4 @@ import com.example.basecrudspringrestendpoint.data.repo.core.BaseRepo
 import org.springframework.stereotype.Repository
 
 @Repository
-interface LabourerRepo: BaseRepo<LabourerEntity, Long>
+interface LabourerRepo : BaseRepo<LabourerEntity, Long>
