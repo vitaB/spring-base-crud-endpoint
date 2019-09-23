@@ -1,4 +1,4 @@
-package com.example.basecrudspringrestendpoint.mapper.core
+package com.example.basecrudspringrestendpoint.presentation.mapper.core
 
 import com.example.basecrudspringrestendpoint.data.model.core.BaseEntity
 import com.example.basecrudspringrestendpoint.presentation.dto.core.BaseDto

@@ -1,7 +1,7 @@
-package com.example.basecrudspringrestendpoint.mapper
+package com.example.basecrudspringrestendpoint.presentation.mapper
 
 import com.example.basecrudspringrestendpoint.data.model.LabourerEntity
-import com.example.basecrudspringrestendpoint.mapper.core.BaseMapper
+import com.example.basecrudspringrestendpoint.presentation.mapper.core.BaseMapper
 import com.example.basecrudspringrestendpoint.presentation.dto.LabourerDto
 import org.mapstruct.InheritConfiguration
 import org.mapstruct.Mapper

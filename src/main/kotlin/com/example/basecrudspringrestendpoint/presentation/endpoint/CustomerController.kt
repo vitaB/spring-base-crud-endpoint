@@ -1,7 +1,7 @@
 package com.example.basecrudspringrestendpoint.presentation.endpoint
 
 import com.example.basecrudspringrestendpoint.data.model.CustomerEntity
-import com.example.basecrudspringrestendpoint.mapper.CustomerMapperImpl
+import com.example.basecrudspringrestendpoint.presentation.mapper.CustomerMapperImpl
 import com.example.basecrudspringrestendpoint.presentation.dto.CustomerDto
 import com.example.basecrudspringrestendpoint.presentation.endpoint.core.BaseCrudController
 import com.example.basecrudspringrestendpoint.service.CustomerService

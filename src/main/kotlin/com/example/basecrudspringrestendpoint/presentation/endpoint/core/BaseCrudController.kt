@@ -1,7 +1,7 @@
 package com.example.basecrudspringrestendpoint.presentation.endpoint.core
 
 import com.example.basecrudspringrestendpoint.data.model.core.BaseEntity
-import com.example.basecrudspringrestendpoint.mapper.core.BaseMapper
+import com.example.basecrudspringrestendpoint.presentation.mapper.core.BaseMapper
 import com.example.basecrudspringrestendpoint.presentation.dto.core.BaseDto
 import com.example.basecrudspringrestendpoint.service.core.BaseCrudService
 import org.springframework.http.ResponseEntity

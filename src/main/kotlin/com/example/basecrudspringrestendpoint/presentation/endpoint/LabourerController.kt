@@ -1,7 +1,7 @@
 package com.example.basecrudspringrestendpoint.presentation.endpoint
 
 import com.example.basecrudspringrestendpoint.data.model.LabourerEntity
-import com.example.basecrudspringrestendpoint.mapper.LabourerMapperImpl
+import com.example.basecrudspringrestendpoint.presentation.mapper.LabourerMapperImpl
 import com.example.basecrudspringrestendpoint.presentation.dto.LabourerDto
 import com.example.basecrudspringrestendpoint.presentation.endpoint.core.BaseCrudController
 import com.example.basecrudspringrestendpoint.service.LabourerService
