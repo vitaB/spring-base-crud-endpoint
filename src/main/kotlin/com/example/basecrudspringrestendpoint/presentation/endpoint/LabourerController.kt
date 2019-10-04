@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam
 class LabourerController(override val service: LabourerService,
                          override val mapper: LabourerMapper) : BaseCrudController<LabourerEntity, Long, LabourerDto>() {
     @GetMapping("finByName")
-    fun findByName(@RequestParam name: String): ResponseEntity<LabourerDto?> {
+    fun findByName(@RequestParam name: String): ResponseEntity<LabourerDto?> = mapper.run {
         val entity = service.findByName(name)
         return if (entity != null)
-            ResponseEntity.ok(mapper.convertToDto(entity))
+            ResponseEntity.ok(entity.convertToDto())
         else
             ResponseEntity.notFound().build()
     }

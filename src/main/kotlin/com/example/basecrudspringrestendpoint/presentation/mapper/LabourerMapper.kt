@@ -11,8 +11,8 @@ import org.mapstruct.Mapping
 interface LabourerMapper : BaseMapper<LabourerEntity, LabourerDto> {
 
     @Mapping(target = "estrangement", source = "alienation")
-    override fun convertToDto(entity: LabourerEntity): LabourerDto
+    override fun LabourerEntity.convertToDto(): LabourerDto
 
     @InheritInverseConfiguration
-    override fun convertToModel(dto: LabourerDto): LabourerEntity
+    override fun LabourerDto.convertToModel(): LabourerEntity
 }

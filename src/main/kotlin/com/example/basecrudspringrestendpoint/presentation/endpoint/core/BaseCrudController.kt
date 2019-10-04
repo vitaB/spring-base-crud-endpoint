@@ -15,28 +15,29 @@ abstract class BaseCrudController<Entity : BaseEntity, Id, Dto : BaseDto> {
 
 
     @PostMapping("/save")
-    fun save(@RequestBody dto: Dto): ResponseEntity<Dto> {
-        val entity = mapper.convertToModel(dto)
+    fun save(@RequestBody dto: Dto): ResponseEntity<Dto> = mapper.run {
+        val entity = dto.convertToModel()
         val saved = service.save(entity)
-        return ResponseEntity.ok(mapper.convertToDto(saved))
+        return ResponseEntity.ok(saved.convertToDto())
     }
 
     @GetMapping("finById")
-    fun findById(@RequestParam i: Id): ResponseEntity<Dto?> {
+    fun findById(@RequestParam i: Id): ResponseEntity<Dto?> = mapper.run {
         val entity = service.findById(i)
         return if (entity != null)
-            ResponseEntity.ok(mapper.convertToDto(entity))
+            ResponseEntity.ok(entity.convertToDto())
         else
             ResponseEntity.notFound().build()
     }
 
     @DeleteMapping("delete")
-    fun delete(@RequestBody dto: Dto): ResponseEntity<Void> {
-        service.delete(mapper.convertToModel(dto))
+    fun delete(@RequestBody dto: Dto): ResponseEntity<Void> = mapper.run {
+        service.delete(dto.convertToModel())
         return ResponseEntity.ok().build()
     }
 
     @GetMapping("findAll")
-    fun findAll(): ResponseEntity<List<Dto>> =
-            ResponseEntity.ok(service.findAll().map { mapper.convertToDto(it) })
+    fun findAll(): ResponseEntity<List<Dto>> = mapper.run {
+        ResponseEntity.ok(service.findAll().map { it.convertToDto() })
+    }
 }

@@ -6,7 +6,7 @@ import com.example.basecrudspringrestendpoint.presentation.dto.core.BaseDto
 
 interface BaseMapper<Entity : BaseEntity, Dto : BaseDto> {
 
-    fun convertToDto(entity: Entity): Dto
+    fun Entity.convertToDto(): Dto
 
-    fun convertToModel(dto: Dto): Entity
+    fun Dto.convertToModel(): Entity
 }
