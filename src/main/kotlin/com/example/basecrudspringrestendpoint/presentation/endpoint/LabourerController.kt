@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam
 @Controller
 @RequestMapping("/api/v1/labourer")
 class LabourerController(override val service: LabourerService,
-                         override val mapper: LabourerMapper) : BaseCrudController<LabourerEntity, Long, LabourerDto>() {
+                         mapper: LabourerMapper) : BaseCrudController<LabourerEntity, Long, LabourerDto>(mapper) {
     @GetMapping("finByName")
-    fun findByName(@RequestParam name: String): ResponseEntity<LabourerDto?> = mapper.run {
+    fun findByName(@RequestParam name: String): ResponseEntity<LabourerDto?> {
         val entity = service.findByName(name)
         return if (entity != null)
             ResponseEntity.ok(entity.convertToDto())
