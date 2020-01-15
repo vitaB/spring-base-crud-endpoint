@@ -6,7 +6,7 @@ import com.example.basecrudspringrestendpoint.service.core.BaseCrudService
 import org.springframework.stereotype.Service
 
 @Service
-class LabourerService(override val repo: LabourerRepo) : BaseCrudService<LabourerEntity, Long>() {
+class LabourerService(override val repo: LabourerRepo) : BaseCrudService<LabourerEntity, Long> {
 
     fun findByName(name: String): LabourerEntity? = repo.findByName(name)
 }

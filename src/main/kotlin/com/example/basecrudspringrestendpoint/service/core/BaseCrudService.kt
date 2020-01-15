@@ -4,12 +4,11 @@ import com.example.basecrudspringrestendpoint.data.model.core.BaseEntity
 import com.example.basecrudspringrestendpoint.data.repo.core.BaseRepo
 import org.springframework.data.repository.findByIdOrNull
 
-abstract class BaseCrudService<Entity : BaseEntity, Id> {
+interface BaseCrudService<Entity : BaseEntity, Id>  {
+    val repo: BaseRepo<Entity, Id>
 
-    abstract val repo: BaseRepo<Entity, Id>
-
-    fun save(entity: Entity): Entity =
-            repo.save(entity)
+    fun Entity.save(): Entity =
+            repo.save(this)
 
     fun findById(i: Id): Entity? =
             repo.findByIdOrNull(i)
@@ -17,7 +16,7 @@ abstract class BaseCrudService<Entity : BaseEntity, Id> {
     fun findAll(): List<Entity> =
             repo.findAll().toList()
 
-    fun delete(entity: Entity) {
-        repo.delete(entity)
+    fun Entity.delete() {
+        repo.delete(this)
     }
 }

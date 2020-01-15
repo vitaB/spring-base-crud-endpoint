@@ -5,6 +5,6 @@ import javax.persistence.Entity
 
 @Entity
 data class CustomerEntity(var name: String?, var accountNumber: String?) : BaseEntity() {
-    // empty constructor and mutable variables are necessary for MapStruct
+    @Deprecated("empty constructor and mutable variables are necessary for MapStruct")
     constructor() : this(null, null)
 }

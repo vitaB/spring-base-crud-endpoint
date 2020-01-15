@@ -6,4 +6,4 @@ import com.example.basecrudspringrestendpoint.service.core.BaseCrudService
 import org.springframework.stereotype.Service
 
 @Service
-class CustomerService(override val repo: CustomerRepo) : BaseCrudService<CustomerEntity, Long>()
+class CustomerService(override val repo: CustomerRepo) : BaseCrudService<CustomerEntity, Long>
