@@ -1,5 +1,6 @@
 # spring-base-crud-endpoint
 
-abstract spring crud endpoint with dto layer using different approaches
-* one branch is using inheritance(java style)
-* the over branch is builld on composition(functionale style)
+some bailer plate code for an abstract spring crud endpoint with dto layer using different approaches
+* inheritance(java style)
+* type extensions and delegations for more functional approach with composition (simulation type classes)
+* TODO type-class with arrow lib
