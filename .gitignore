@@ -1,2 +1,5 @@
-/target/
-/.idea/libraries/
+
+inheritance/target/
+inheritance/.idea/libraries/
+type-extensions/target/
+type-extensions/.idea/libraries/
